@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>First Servlet</title>
+<script type="text/javascript" src = "jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
+var baseUrl = "http://127.0.0.1:9876/resources";
+//var url = baseUrl + "/data.json";
+var url = "https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyDa4xo8Tw7z0PMD3CmRUIJUCNYegdYuP6E";
+var successCB = function(data){
+	document.getElementById("author").innerHTML =" by " + data.name;
+};
+var failureCB = function(error){
+	document.getElementById("author").innerHTML = "Unable to get data from the service" + error;
+};
+var requestConfig = {
+		dataType : "json",
+		url : url,
+		asyn : true,
+		type : "GET"
+};
+var promise = $.ajax(requestConfig);
+promise.done(successCB);
+promise.fail(failureCB);
+</script>
+</head>
+<body>Hello World</body>
+<span id = "author"></span>
+</html>

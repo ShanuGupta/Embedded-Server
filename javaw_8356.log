@@ -1,0 +1,6 @@
+---
+JVMX version - Nov 11 2015 09:22:43 - 71_REL - optU - windows amd64 - 6 - bas2:257168 (mixed mode)
+Now: 2016-12-22 15:15:20, PID: 8356
+hostname: INLN50908331A, current dir: C:\osgi_app_ws\embeddedserver
+---
+   :    [21532] 15:15:20 ***ERROR (:0): OutOfMemoryError: Could not allocate 536875136 bytes
