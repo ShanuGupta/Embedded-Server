@@ -106,16 +106,6 @@ public class PromptingService {
 		}
 		// reversing the prompt array to maintain the correct order
 
-		 // Author: I319119 // As we are assuming all URL parameters we are
-		 // sending are coming in order but in Red Hat Linux the order is not
-		// maintained so if Range Prompt Parameter End is first only then we
-		//will reverse the promptArray to maintain the correct order.
-		// [{"promptName":"City(End)","keys":"","values":["Berlin"],
-		 //"operator":"EQUAL"},
-		// {"promptName":"City(Start)","keys":"","values":["Austin"],
-		// "operator":"EQUAL"}] Above is the case where we reverse the
-		 // promptArray.
-
 		if (promptArray.size() > 0) {
 			if ((promptArray.get(0).get("promptName").toString().contains("(End)"))) {
 				Collections.reverse(promptArray);
